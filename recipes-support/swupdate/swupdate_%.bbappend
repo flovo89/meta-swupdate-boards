@@ -8,7 +8,7 @@ SRC_URI += " \
     "
 
 do_install_append() {
-    install -d ${D}${sysconfdir}/swupdate/conf.d/
+    install -d ${D}${libdir}/swupdate/conf.d/
     install -m 0644 ${WORKDIR}/09-swupdate-args ${D}${libdir}/swupdate/conf.d/
 
     install -d ${D}${sysconfdir}
