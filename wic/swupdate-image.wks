@@ -1,0 +1,11 @@
+# Boot partition
+part /boot --source bootimg-partition --ondisk mmcblk --fstype=vfat --label boot --active --align 4096 --size 8M --extra-space 0
+
+# Rootfs partition
+part / --source rootfs --ondisk mmcblk --fstype=ext4 --label root --align 4096 --size 2048M
+
+# Rootfs backup partition
+part /rootfs-bkup --source rootfs --ondisk mmcblk --fstype=ext4 --label rootfs-bkup --align 4096 --size 2048M
+
+# User data partition
+part /userdata --ondisk mmcblk --fstype=vfat --label userdata --align 4096 --size 2048M
