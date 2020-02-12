@@ -7,7 +7,9 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 require recipes-core/images/core-image-base-network-setup.bb
 
-IMAGE_FSTYPES += "ext4.gz"
+IMAGE_FSTYPES += "ext4.gz wic"
+
+WKS_FILE = "wic/swupdate-image.wks"
 
 IMAGE_INSTALL += " \
     swupdate \
