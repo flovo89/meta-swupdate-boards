@@ -18,4 +18,5 @@ IMAGE_INSTALL += " \
     u-boot-fw-utils \
     lua \
     parted \
+    util-linux \
     "

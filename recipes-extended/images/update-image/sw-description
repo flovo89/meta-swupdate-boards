@@ -2,7 +2,7 @@ software =
 {
 	version = "0.1.0";
 
-	raspberrypi0-wifi = {
+	raspberrypi = {
 		hardware-compatibility: [ "1.0"];
 		stable : {
 			copy1 : {
@@ -20,13 +20,6 @@ software =
 						type = "lua";
 					}
 				);
-                                uboot: (
-                                        {
-                                        	name = "rpipart";
-                                  		value = "2";
-                                        }
-				);
-
 			};
 			copy2 : {
 				images: (
@@ -42,12 +35,6 @@ software =
 						filename = "emmcsetup.lua";
 						type = "lua";
 					}
-				);
-                                uboot: (
-                                        {
-                                        	name = "rpipart";
-                                  		value = "3";
-                                        }
 				);
 			};
 		};
