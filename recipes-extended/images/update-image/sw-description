@@ -3,7 +3,7 @@ software =
 	version = "0.1.0";
 
 	raspberrypi = {
-		hardware-compatibility: [ "1.0"];
+		hardware-compatibility: ["1.0"];
 		stable : {
 			copy1 : {
 				images: (
@@ -20,6 +20,12 @@ software =
 						type = "lua";
 					}
 				);
+				bootenv: (
+					{
+						name = "rpipart";
+						value = "2";
+					}
+				);
 			};
 			copy2 : {
 				images: (
@@ -34,6 +40,12 @@ software =
 					{
 						filename = "emmcsetup.lua";
 						type = "lua";
+					}
+				);
+				bootenv: (
+					{
+						name = "rpipart";
+						value = "3";
 					}
 				);
 			};
