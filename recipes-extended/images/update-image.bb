@@ -17,3 +17,8 @@ IMAGE_DEPENDS = "swupdate-image"
 SWUPDATE_IMAGES = "swupdate-image"
 
 SWUPDATE_IMAGES_FSTYPES[swupdate-image] = ".ext4.gz"
+
+do_update_versions_in_description() {
+    sed -i 's/##MACHINE_PLACEHOLDER##/'${MACHINE}'/g' ${WORKDIR}/sw-description
+}
+addtask do_update_versions_in_description after do_unpack before do_swuimage
